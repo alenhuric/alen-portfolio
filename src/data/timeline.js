@@ -1,14 +1,26 @@
 export default [
     {
-        year: '2022-2023',
+        year: '2022',
         title: 'PHP Developer',
-        duration: '1 year',
-        details: 'wrote php code. te w-3 h-3 bg-stone-200 rounded-full mt-1.5 -left-1.5 border bord. te w-3 h-3 bg-stone-200 rounded-full mt-1.5 -left-1.5 border bord.te w-3 h-3 bg-stone-200 rounded-full mt-1.5 -left-1.5 border bord'
+        location: 'Professional Computing Resources',
+        details: 'Leveraged Zend Framework for the design and development of web applications'
     },
     {
-        year: '2016-2020',
+        year: '2020',
+        title: 'Software Developer',
+        location: 'YRC Worldwide',
+        details: "Designed, implemented, and maintained applications using Natural programming language and Software AG's Adabas database management system"
+    },
+    {
+        year: '2019',
+        title: 'Software Development Intern',
+        location: 'YRC Worldwide',
+        details: 'Contributed to the testing and development of Adabas business applications using Natural'
+    },
+    {
+        year: '2016',
         title: 'Computer Science Student',
-        duration: '4 years',
-        details: 'Student at GVSU. te w-3 h-3 bg-stone-200 rounded-full mt-1.5 -left-1.5 border bord. te w-3 h-3 bg-stone-200 rounded-full mt-1.5 -left-1.5 border bord'
+        location: 'Grand Valley State University',
+        details: 'Relevant Coursework: Databases, System-Level Programming, Data Structures & Algorithms, Microarchitecture & Assembly, Game Design, Cryptography'
     },
 ]
