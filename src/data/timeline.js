@@ -21,6 +21,6 @@ export default [
         year: '2016',
         title: 'Computer Science Student',
         location: 'Grand Valley State University',
-        details: 'Relevant Coursework: Databases, System-Level Programming, Data Structures & Algorithms, Microarchitecture & Assembly, Game Design, Cryptography'
+        details: 'Completed coursework in various subjects, including Databases, System-Level Programming, Data Structures & Algorithms, Microarchitecture & Assembly, Game Design, and Cryptography."'
     },
 ]
