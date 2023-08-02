@@ -29,12 +29,11 @@ function Contact() {
                         rows="10"
                         className='p-2 mb-4 bg-transparent border-2 rounded-md focus:outline-none'/>
                     <button 
-                        type='button'
-                        className='text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-r from-yellow-500 to-pink-500 drop-shadow-md'
+                        type='submit'
+                        className='text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300'
                     >
                         Contact Me
                     </button>
-
                 </form>
             </div>
         </div>
