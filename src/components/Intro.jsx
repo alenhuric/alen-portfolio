@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Intro({ theme }) {
-    const logoSrc = theme === 'dark' ? 'public/assets/logo-white.png' : 'public/assets/logo-black.png';
+    const logoSrc = theme === 'dark' ? '/assets/logo-white.png' : '/assets/logo-black.png';
 
     return (
         <div className='flex items-center justify-center flex-col text-center pt-20 pb-6'>
