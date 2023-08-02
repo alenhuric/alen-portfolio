@@ -1,6 +1,6 @@
 export default[
     {
-        title: 'This Portfolio',
+        title: 'This Site',
         imgUrl: '/assets/reactJS.png',
         stack: ['React', 'Tailwind CSS', 'Vite'],
         link: 'https://github.com/alenhuric/alen-portfolio'
