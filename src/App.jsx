@@ -62,14 +62,70 @@ function App() {
 		</svg>
 	);
 
+	const documentIcon = (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			fill="none"
+			viewBox="0 0 24 24"
+			strokeWidth={1.5}
+			stroke="currentColor"
+			className="w-6 h-6"
+		>
+			<path
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				d="M8 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z"
+			/>
+			<path
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				d="M16 2v6h6"
+			/>
+		</svg>
+	);
+
+	const documentIcon2 = (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			fill="none"
+			viewBox="0 0 24 24"
+			strokeWidth={1.5}
+			stroke="currentColor"
+			className="w-6 h-6 stroke-white"
+		>
+			<path
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				d="M8 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z"
+			/>
+			<path
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				d="M16 2v6h6"
+			/>
+		</svg>
+	);
+
+	const openResumeInNewWindow = () => {
+        const url = '/assets/Resume.pdf'; 
+        window.open(url, '_blank');
+    };
+	
   return (
 	<>
 		<button
 			type="button"
 			onClick={handleThemeSwitch}
-			className="fixed p-2 z-10 right-20 top-4 bg-violet-300 dark:bg-orange-300 text-lg rounded-md"
+			className="fixed p-2 z-10 right-5 top-4 bg-violet-300 dark:bg-orange-300 text-lg rounded-md"
 		>
 			{theme === 'dark' ? sun : moon}
+		</button>
+		<button
+			type="button"
+			onClick={openResumeInNewWindow}
+			className="fixed p-2 z-10 right-5 top-20 bg-violet-300 dark:bg-orange-300 text-lg rounded-md"
+		>
+			{theme === 'dark' ? documentIcon : documentIcon2}
 		</button>
 		<div className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
 			<div className="max-w-5xl w-11/12 mx-auto">
