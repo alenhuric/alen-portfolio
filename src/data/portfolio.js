@@ -17,4 +17,10 @@ export default[
         stack: ['Symfony', 'Twig', 'MongoDB'],
         link: 'https://github.com/alenhuric/BicycleChallenge2/tree/master'
     },
+    {
+        title: 'To-Do List',
+        imgUrl: '/assets/to-do-app.png',
+        stack: ['React', 'Node.js', 'Tailwind CSS'],
+        link: 'https://github.com/alenhuric/To-Do-List-App'
+    },
 ]
