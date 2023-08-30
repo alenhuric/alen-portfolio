@@ -53,7 +53,7 @@ const Intro = ({ theme }) => {
       </p>
       <img src={logoSrc} alt="Logo Image" width='200' height='150' />
       <p className='text-sm max-w-xl mb-6 font-bold'>
-        Experienced Software Developer with over 3 years of experience in working with Web-based applications and Enterprise Resource Planning (ERP) Systems.
+        Experienced Software Developer with over 3 years of experience in working with web-based applications and Enterprise Resource Planning (ERP) systems.
       </p>
       <style>
         {`
