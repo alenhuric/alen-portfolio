@@ -216,7 +216,6 @@ function App() {
           </div>
         )}
 
-      {/* <Router> */}
         <Routes>
           <Route path="/" element={
             <div className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
@@ -257,8 +256,6 @@ function App() {
             </div>
           } />
         </Routes>
-		
-      {/* </Router> */}
 	</div>
 	</Router>
   );
