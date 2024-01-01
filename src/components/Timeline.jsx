@@ -1,7 +1,7 @@
 import React from 'react';
-import timeline from '../data/timeline';
 import TimelineItem from './TimelineItem';
-import Title from './Title';
+import Title from './Title'; 
+import timeline from '../data/timeline'; 
 
 function Timeline() {
    return (
@@ -10,6 +10,7 @@ function Timeline() {
             <Title>Experience</Title>
             {timeline.map(item => (
                <TimelineItem 
+                  key={item.title}
                   year={item.year}
                   title={item.title}
                   location={item.location}
@@ -18,7 +19,8 @@ function Timeline() {
             ))}
          </div>
       </div>
-   )
+   );
 }
+
 
 export default Timeline;

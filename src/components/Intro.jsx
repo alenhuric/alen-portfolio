@@ -48,12 +48,9 @@ const Intro = ({ theme }) => {
           </span>
         ))}
       </h1>
-      <p className='text-base md:text-xl mb-3 font-medium'>
-        Software Dev
-      </p>
       <img src={logoSrc} alt="Logo Image" width='200' height='150' />
       <p className='text-sm max-w-xl mb-6 font-bold'>
-        Experienced Software Developer with over 3 years of experience in working with web-based applications and Enterprise Resource Planning (ERP) systems.
+        A Software Developer with over 3 years of experience working with web-based applications and Enterprise Resource Planning (ERP) systems. Select one of the projects below to browse through some of my work!
       </p>
       <style>
         {`
