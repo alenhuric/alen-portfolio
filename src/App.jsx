@@ -156,7 +156,7 @@ function App() {
   };
 
   return (
-	<Router>
+	<Router basename="/">
 		<div className="relative">
       <button
         type="button"
