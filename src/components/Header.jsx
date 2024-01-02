@@ -112,7 +112,7 @@ const Header = ({ theme, handleThemeSwitch, openResumeInNewWindow, isDropdownOpe
       {isDropdownOpen && (
         <div
           className="fixed bg-gray-200 dark:bg-stone-100 border border-gray-500 dark:border-stone-200 p-2 rounded-md shadow-md"
-          style={{ top: `${menuPosition.top}px`, left: `${menuPosition.left}px` }}
+          style={{ top: `${menuPosition.top}px`, left: `${menuPosition.left}px`, zIndex: 1000 }}
         >
           <Link
               to="/"
