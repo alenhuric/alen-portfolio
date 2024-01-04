@@ -1,7 +1,5 @@
 import React from 'react';
 import ProjectsPortfolioItem from "./ProjectsPortfolioItem"; 
-import reactportfolio from "../../data/projects/reactportfolio";
-import symfonyportfolio from "../../data/projects/symfonyportfolio";
 
 function ProjectsPortfolio({ data }) {
    return (
