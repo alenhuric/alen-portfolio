@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
 
-const Header = ({ theme, handleThemeSwitch, openResumeInNewWindow, isDropdownOpen, toggleDropdown, closeDropdown, menuPosition }) => {
+const Header = ({ theme, handleThemeSwitch, /*openResumeInNewWindo*/ isDropdownOpen, toggleDropdown, closeDropdown, menuPosition }) => {
   const sun = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -94,13 +94,13 @@ const Header = ({ theme, handleThemeSwitch, openResumeInNewWindow, isDropdownOpe
       >
         {theme === 'dark' ? sun : moon}
       </button>
-      <button
+      {/* <button
         type="button"
         onClick={openResumeInNewWindow}
         className="fixed p-2 z-10 right-5 top-20 bg-violet-300 dark:bg-orange-300 text-lg rounded-md"
       >
         {theme === 'dark' ? documentIcon : documentIcon2}
-      </button>
+      </button> */}
       <button
         type="button"
         onClick={toggleDropdown}
