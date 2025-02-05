@@ -9,6 +9,6 @@ export default[
         title: 'X/Twitter API',
         imgUrl: '/assets/twitterx.png',
         stack: ['Laravel', ],
-        link: 'https://github.com/alenhuric/twitter-api'
+        link: 'https://api.alenhuric.com'
     },
 ]
