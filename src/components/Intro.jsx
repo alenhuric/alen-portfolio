@@ -50,7 +50,7 @@ const Intro = ({ theme }) => {
       </h1>
       <img src={logoSrc} alt="Logo Image" width='200' height='150' />
       <p className='text-sm max-w-xl mb-6 font-bold'>
-        Browse through some of my work below!
+        Browse through some of my software development work below!
       </p>
       <style>
         {`
