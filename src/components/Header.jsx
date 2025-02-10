@@ -1,7 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom'; 
+import React from "react";
+import { Link } from "react-router-dom";
 
-const Header = ({ theme, handleThemeSwitch, /*openResumeInNewWindo*/ isDropdownOpen, toggleDropdown, closeDropdown, menuPosition }) => {
+const Header = ({
+  theme,
+  handleThemeSwitch,
+  /*openResumeInNewWindo*/ isDropdownOpen,
+  toggleDropdown,
+  closeDropdown,
+  menuPosition,
+}) => {
   const sun = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +88,11 @@ const Header = ({ theme, handleThemeSwitch, /*openResumeInNewWindo*/ isDropdownO
       stroke="currentColor"
       className="w-6 h-6"
     >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M4 6h16M4 12h16m-7 6h7"
+      />
     </svg>
   );
 
@@ -92,7 +103,7 @@ const Header = ({ theme, handleThemeSwitch, /*openResumeInNewWindo*/ isDropdownO
         onClick={handleThemeSwitch}
         className="fixed p-2 z-10 right-5 top-4 bg-violet-300 dark:bg-orange-300 text-lg rounded-md"
       >
-        {theme === 'dark' ? sun : moon}
+        {theme === "dark" ? sun : moon}
       </button>
       {/* <button
         type="button"
@@ -111,37 +122,52 @@ const Header = ({ theme, handleThemeSwitch, /*openResumeInNewWindo*/ isDropdownO
 
       {isDropdownOpen && (
         <div
-          className="fixed bg-gray-200 dark:bg-stone-100 border border-gray-500 dark:border-stone-200 p-2 rounded-md shadow-md"
-          style={{ top: `${menuPosition.top}px`, left: `${menuPosition.left}px`, zIndex: 1000 }}
+          className="fixed bg-white dark:bg-gray-400 border border-gray-300 dark:border-gray-700 p-3 rounded-lg shadow-lg"
+          style={{
+            top: `${menuPosition.top}px`,
+            left: `${menuPosition.left}px`,
+            zIndex: 1000,
+            minWidth: "180px",
+          }}
         >
-          <Link
-              to="/"
-              className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-stone-500 transition duration-300"
-              onClick={closeDropdown}
-            >
-              Home
-            </Link>
-            <Link
-              to="/ReactProjects"
-              className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-stone-500 transition duration-300"
-              onClick={closeDropdown}
-            >
-              React Projects
-            </Link>
-            <Link
-              to="/SymfonyProjects"
-              className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-stone-500 transition duration-300"
-              onClick={closeDropdown}
-            >
-              Symfony Projects
-            </Link>
-            <Link
-              to="/LaravelProjects"
-              className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-stone-500 transition duration-300"
-              onClick={closeDropdown}
-            >
-              Laravel Projects
-            </Link>
+          <ul className="flex flex-col space-y-2">
+            <li>
+              <Link
+                to="/"
+                className="block py-2 px-4 rounded-md hover:bg-gray-100 dark:hover:bg-violet-500 transition duration-300"
+                onClick={closeDropdown}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/ReactProjects"
+                className="block py-2 px-4 rounded-md hover:bg-gray-100 dark:hover:bg-violet-500 transition duration-300"
+                onClick={closeDropdown}
+              >
+                React Projects
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/LaravelProjects"
+                className="block py-2 px-4 rounded-md hover:bg-gray-100 dark:hover:bg-violet-500 transition duration-300"
+                onClick={closeDropdown}
+              >
+                Laravel Projects
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/SymfonyProjects"
+                className="block py-2 px-4 rounded-md hover:bg-gray-100 dark:hover:bg-violet-500 transition duration-300"
+                onClick={closeDropdown}
+              >
+                Symfony Projects
+              </Link>
+            </li>
+          </ul>
         </div>
       )}
     </>

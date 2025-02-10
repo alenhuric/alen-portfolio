@@ -19,12 +19,11 @@ function PortfolioItem({ title, imgUrl, link }) {
           className="w-80 h-36 md:h-48 object-cover cursor-pointer transition-all duration-300 
                      group-hover:scale-105 group-hover:transform-gpu group-hover:rotate-2"
         />
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
 
         <div className="w-full p-4 relative">
           <h3
             className="text-lg md:text-xl dark:text-white text-black mb-2 md:mb-3 font-semibold 
-                              group-hover:text-white dark:group-hover:text-violet-600 
+                              group-hover:text-black dark:group-hover:text-violet-600 
                               transition-colors"
           >
             {title}
