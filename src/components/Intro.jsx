@@ -60,17 +60,35 @@ const Intro = ({ theme }) => {
         initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
         animate={{ opacity: 1, scale: 1, rotate: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
+        whileHover={{ rotate: 3 }}
       />
 
       <motion.p
-        className="text-lg md:text-xl max-w-2xl mb-6 font-semibold dark:text-gray-300 tracking-wide italic"
+        className="text-lg md:text-xl max-w-2xl mb-6 font-semibold tracking-wide italic"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        Browse through some of my{" "}
-        <span className="text-violet-500">software development</span> work
-        below!
+        {[
+          "Browse",
+          "through",
+          "some",
+          "of",
+          "my",
+          "software",
+          "development",
+          "work",
+          "below!",
+        ].map((word, index) => (
+          <span
+            key={index}
+            className={`${
+              theme === "dark" ? "text-white" : "text-black"
+            } hover:text-violet-500 transition-colors duration-300 inline-block mr-1`}
+          >
+            {word}
+          </span>
+        ))}
       </motion.p>
       <style>
         {`
