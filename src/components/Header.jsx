@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 const Header = ({
@@ -9,6 +9,30 @@ const Header = ({
   closeDropdown,
   menuPosition,
 }) => {
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target) &&
+        !event.target.closest("button")
+      ) {
+        closeDropdown();
+      }
+    };
+
+    if (isDropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isDropdownOpen, closeDropdown]);
+
   const sun = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +40,7 @@ const Header = ({
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="w-6 h-6"
+      className="w-6 h-6 hover:scale-[1.20]"
     >
       <path
         strokeLinecap="round"
@@ -33,7 +57,7 @@ const Header = ({
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="white"
-      className="w-6 h-6"
+      className="w-6 h-6 hover:scale-[1.20]"
     >
       <path
         strokeLinecap="round"
@@ -86,7 +110,7 @@ const Header = ({
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="w-6 h-6"
+      className="w-6 h-6 hover:scale-[1.20]"
     >
       <path
         strokeLinecap="round"
@@ -105,6 +129,7 @@ const Header = ({
       >
         {theme === "dark" ? sun : moon}
       </button>
+
       {/* <button
         type="button"
         onClick={openResumeInNewWindow}
@@ -112,6 +137,7 @@ const Header = ({
       >
         {theme === 'dark' ? documentIcon : documentIcon2}
       </button> */}
+
       <button
         type="button"
         onClick={toggleDropdown}
@@ -122,6 +148,7 @@ const Header = ({
 
       {isDropdownOpen && (
         <div
+          ref={dropdownRef}
           className="fixed bg-white dark:bg-gray-400 border border-gray-300 dark:border-gray-700 p-3 rounded-lg shadow-lg"
           style={{
             top: `${menuPosition.top}px`,

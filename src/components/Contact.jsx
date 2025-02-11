@@ -40,7 +40,7 @@ function Contact() {
           />
           <button
             type="submit"
-            className="text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"
+            className="text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 hover:scale-[1.05]"
           >
             Contact Me
           </button>
