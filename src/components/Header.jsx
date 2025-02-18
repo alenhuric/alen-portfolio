@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = ({
   theme,
@@ -10,6 +10,10 @@ const Header = ({
   menuPosition,
 }) => {
   const dropdownRef = useRef(null);
+
+  const location = useLocation();
+
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -146,6 +150,28 @@ const Header = ({
         {menuIcon}
       </button>
 
+      {!isHomePage && (
+        <button
+          onClick={() => window.history.back()}
+          className="fixed p-2 z-10 left-5 top-16 bg-violet-300 dark:bg-orange-300 text-lg rounded-md"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1024 1024"
+            className="w-6 h-6 hover:scale-[1.20]"
+          >
+            <path
+              fill="currentColor"
+              d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"
+            />
+            <path
+              fill="currentColor"
+              d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"
+            />
+          </svg>
+        </button>
+      )}
+
       {isDropdownOpen && (
         <div
           ref={dropdownRef}
@@ -158,15 +184,17 @@ const Header = ({
           }}
         >
           <ul className="flex flex-col space-y-2">
-            <li>
-              <Link
-                to="/"
-                className="block py-2 px-4 rounded-md hover:bg-gray-100 dark:hover:bg-violet-500 transition duration-300"
-                onClick={closeDropdown}
-              >
-                Home
-              </Link>
-            </li>
+            {!isHomePage && (
+              <li>
+                <Link
+                  to="/"
+                  className="block py-2 px-4 rounded-md hover:bg-gray-100 dark:hover:bg-violet-500 transition duration-300"
+                  onClick={closeDropdown}
+                >
+                  Home
+                </Link>
+              </li>
+            )}
             <li>
               <Link
                 to="/ReactProjects"
@@ -183,6 +211,15 @@ const Header = ({
                 onClick={closeDropdown}
               >
                 Laravel Projects
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/VueProjects"
+                className="block py-2 px-4 rounded-md hover:bg-gray-100 dark:hover:bg-violet-500 transition duration-300"
+                onClick={closeDropdown}
+              >
+                Vue.js Projects
               </Link>
             </li>
             <li>

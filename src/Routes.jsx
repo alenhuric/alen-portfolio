@@ -1,7 +1,7 @@
 // Routes.jsx
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import App from './App';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import App from "./App";
 
 const Routes = () => {
   return (
@@ -10,6 +10,7 @@ const Routes = () => {
         <Route path="/" exact component={App} />
         <Route path="/react/ReactProjects" component={ProjectsPortfolio} />
         <Route path="/react/SymfonyProjects" component={ProjectsPortfolio} />
+        <Route path="/react/VueProjects" component={ProjectsPortfolio} />
         <Route path="/react/LaravelProjects" component={ProjectsPortfolio} />
       </Switch>
     </Router>
