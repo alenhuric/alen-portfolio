@@ -6,6 +6,12 @@ export default [
     link: "https://api.alenhuric.com",
   },
   {
+    title: "Blog App",
+    imgUrl: "/assets/blog-app.png",
+    stack: ["Laravel", "Tailwind CSS", "Eloquent"],
+    link: "https://blog.alenhuric.com",
+  },
+  {
     title: "Task List",
     imgUrl: "/assets/laravel.png",
     stack: ["Laravel", "Tailwind CSS", "Eloquent"],
