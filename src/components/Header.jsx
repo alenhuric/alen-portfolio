@@ -1,5 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
+import {
+  AiOutlineHome,
+  AiOutlineUser,
+  AiOutlineFundProjectionScreen,
+} from "react-icons/ai";
 
 const Header = ({
   theme,
@@ -126,13 +131,13 @@ const Header = ({
 
   return (
     <>
-      <button
+      {/* <button
         type="button"
         onClick={handleThemeSwitch}
         className="fixed p-2 z-10 right-5 top-4 bg-violet-300 dark:bg-orange-300 text-lg rounded-md"
       >
         {theme === "dark" ? sun : moon}
-      </button>
+      </button> */}
 
       {/* <button
         type="button"
@@ -142,35 +147,51 @@ const Header = ({
         {theme === 'dark' ? documentIcon : documentIcon2}
       </button> */}
 
-      <button
+      {/* <button
         type="button"
         onClick={toggleDropdown}
         className="fixed p-2 z-10 left-5 top-4 bg-violet-300 dark:bg-orange-300 text-lg rounded-md"
       >
         {menuIcon}
-      </button>
+      </button> */}
 
-      {!isHomePage && (
-        <button
-          onClick={() => window.history.back()}
-          className="fixed p-2 z-10 left-5 top-16 bg-violet-300 dark:bg-orange-300 text-lg rounded-md"
+      <nav
+        className={`fixed top-0 left-0 w-full flex justify-center bg-gray-100/90 dark:bg-violet-500/90 px-6 py-3 shadow-md backdrop-blur-sm z-50 transition-all`}
+      >
+        <Link
+          to="/"
+          className="hover:text-violet-700 dark:text-white dark:hover:text-black transition-colors duration-300 font-medium flex items-center space-x-1
+          "
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1024 1024"
-            className="w-6 h-6 hover:scale-[1.20]"
-          >
-            <path
-              fill="currentColor"
-              d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"
-            />
-            <path
-              fill="currentColor"
-              d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"
-            />
-          </svg>
+          <AiOutlineHome className="text-lg" />
+          <span>Home</span>
+        </Link>
+
+        <Link
+          to="/About"
+          className="hover:text-violet-700 dark:text-white dark:hover:text-black transition-colors duration-300 font-medium flex items-center space-x-1 pl-5
+          "
+        >
+          <AiOutlineUser className="text-lg" />
+          <span>About</span>
+        </Link>
+
+        <Link
+          to="/projects"
+          className="hover:text-violet-700 dark:text-white dark:hover:text-black transition-colors duration-300 font-medium flex items-center space-x-1 pl-5
+          "
+        >
+          <AiOutlineFundProjectionScreen className="text-lg" />
+          <span>Projects</span>
+        </Link>
+        <button
+          type="button"
+          onClick={handleThemeSwitch}
+          className="fixed p-2 z-10 right-5 top-1 bg-violet-300 dark:bg-orange-300 text-lg rounded-md"
+        >
+          {theme === "dark" ? sun : moon}
         </button>
-      )}
+      </nav>
 
       {isDropdownOpen && (
         <div
