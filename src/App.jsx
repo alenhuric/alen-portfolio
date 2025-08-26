@@ -12,7 +12,6 @@ import symfonyportfolio from "./data/projects/symfonyportfolio";
 import reactportfolio from "./data/projects/reactportfolio";
 import laravelportfolio from "./data/projects/laravelportfolio";
 import vueportfolio from "./data/projects/vueportfolio";
-import Particle from "./components/Particle";
 
 function App() {
   const [theme, setTheme] = useState(null);

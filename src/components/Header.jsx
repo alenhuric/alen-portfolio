@@ -160,8 +160,7 @@ const Header = ({
       >
         <Link
           to="/"
-          className="hover:text-violet-700 dark:text-white dark:hover:text-black transition-colors duration-300 font-medium flex items-center space-x-1
-          "
+          className="relative flex items-center space-x-1 mx-4 font-medium transition-colors duration-300 text-gray-800 dark:text-white hover:text-violet-700 dark:hover:text-black after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-0 after:bg-violet-700 dark:after:bg-black after:transition-all after:duration-300 hover:after:w-full"
         >
           <AiOutlineHome className="text-lg" />
           <span>Home</span>
@@ -169,8 +168,7 @@ const Header = ({
 
         <Link
           to="/About"
-          className="hover:text-violet-700 dark:text-white dark:hover:text-black transition-colors duration-300 font-medium flex items-center space-x-1 pl-5
-          "
+          className="relative flex items-center space-x-1 mx-4 font-medium transition-colors duration-300 text-gray-800 dark:text-white hover:text-violet-700 dark:hover:text-black after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-0 after:bg-violet-700 dark:after:bg-black after:transition-all after:duration-300 hover:after:w-full"
         >
           <AiOutlineUser className="text-lg" />
           <span>About</span>
@@ -178,8 +176,7 @@ const Header = ({
 
         <Link
           to="/projects"
-          className="hover:text-violet-700 dark:text-white dark:hover:text-black transition-colors duration-300 font-medium flex items-center space-x-1 pl-5
-          "
+          className="relative flex items-center space-x-1 mx-4 font-medium transition-colors duration-300 text-gray-800 dark:text-white hover:text-violet-700 dark:hover:text-black after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-0 after:bg-violet-700 dark:after:bg-black after:transition-all after:duration-300 hover:after:w-full"
         >
           <AiOutlineFundProjectionScreen className="text-lg" />
           <span>Projects</span>
