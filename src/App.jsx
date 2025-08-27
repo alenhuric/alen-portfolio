@@ -12,6 +12,7 @@ import symfonyportfolio from "./data/projects/symfonyportfolio";
 import reactportfolio from "./data/projects/reactportfolio";
 import laravelportfolio from "./data/projects/laravelportfolio";
 import vueportfolio from "./data/projects/vueportfolio";
+import GithubCalendar from "./components/GithubCalendar";
 
 function App() {
   const [theme, setTheme] = useState(null);
@@ -119,6 +120,7 @@ function App() {
               <div className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
                 <div className="max-w-5xl w-11/12 mx-auto">
                   <Portfolio />
+                  <GithubCalendar />
                   <Footer />
                 </div>
               </div>
