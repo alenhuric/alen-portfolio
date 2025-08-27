@@ -5,6 +5,8 @@ import {
   AiOutlineUser,
   AiOutlineFundProjectionScreen,
 } from "react-icons/ai";
+import { CgGitFork } from "react-icons/cg";
+import { AiFillStar } from "react-icons/ai";
 
 const Header = ({
   theme,
@@ -181,10 +183,48 @@ const Header = ({
           <AiOutlineFundProjectionScreen className="text-lg" />
           <span>Projects</span>
         </Link>
+
+        {/* <a
+          href="https://github.com/alenhuric/alen-portfolio"
+          target="_blank"
+          rel="noopener noreferrer"
+          // className="flex items-center space-x-1 mx-4 px-3 py-2 bg-gray-200 dark:bg-gray-200 rounded-md hover:bg-gray-300 dark:hover:bg-gray-400 transition"
+          // className="flex fixed z-10 right-14 top-1 mx-4 px-3 py-2 bg-gray-200 dark:bg-gray-200 rounded-md hover:bg-gray-300 dark:hover:bg-gray-400 transition"
+          className="flex fixed z-10 right-5 top-1 px-2 py-2.5 bg-gray-200 dark:bg-gray-200 rounded-md hover:bg-gray-300 dark:hover:bg-gray-400 transition"
+        >
+          <CgGitFork style={{ fontSize: "1.2em" }} />
+          <AiFillStar style={{ fontSize: "1.0em" }} />
+        </a> */}
+
+        <a
+          href="https://github.com/alenhuric/alen-portfolio"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+            flex 
+            fixed z-10 right-5 top-1 
+            px-4 py-2.5 
+            bg-gray-200
+            rounded-md 
+            items-center 
+            space-x-1 
+            text-center
+            transition-all 
+            duration-200 
+            ease-in-out
+            hover:-translate-y-0.5
+            hover:bg-violet-300
+            dark:hover:bg-violet-300
+          "
+        >
+          <CgGitFork className="text-[1.2em]" />
+          <AiFillStar className="text-[1em]" />
+        </a>
+
         <button
           type="button"
           onClick={handleThemeSwitch}
-          className="fixed p-2 z-10 right-5 top-1 bg-violet-300 dark:bg-orange-300 text-lg rounded-md"
+          className="fixed p-2 z-10 left-5 top-1 bg-violet-300 dark:bg-orange-200 text-lg rounded-md"
         >
           {theme === "dark" ? sun : moon}
         </button>
