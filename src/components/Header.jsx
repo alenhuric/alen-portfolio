@@ -162,7 +162,7 @@ const Header = ({
       >
         <Link
           to="/"
-          className="relative flex items-center space-x-1 mx-4 font-medium transition-colors duration-300 text-gray-800 dark:text-white hover:text-violet-700 dark:hover:text-black after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-0 after:bg-violet-700 dark:after:bg-black after:transition-all after:duration-300 hover:after:w-full"
+          className="relative flex items-center space-x-1 mx-4 xs:mx-0 font-medium transition-colors duration-300 text-gray-800 dark:text-white hover:text-violet-700 dark:hover:text-black after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-0 after:bg-violet-700 dark:after:bg-black after:transition-all after:duration-300 hover:after:w-full"
         >
           <AiOutlineHome className="text-lg" />
           <span>Home</span>
@@ -178,7 +178,7 @@ const Header = ({
 
         <Link
           to="/projects"
-          className="relative flex items-center space-x-1 mx-4 font-medium transition-colors duration-300 text-gray-800 dark:text-white hover:text-violet-700 dark:hover:text-black after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-0 after:bg-violet-700 dark:after:bg-black after:transition-all after:duration-300 hover:after:w-full"
+          className="relative flex items-center space-x-1 mx-4 xs:mx-0 font-medium transition-colors duration-300 text-gray-800 dark:text-white hover:text-violet-700 dark:hover:text-black after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-0 after:bg-violet-700 dark:after:bg-black after:transition-all after:duration-300 hover:after:w-full"
         >
           <AiOutlineFundProjectionScreen className="text-lg" />
           <span>Projects</span>
