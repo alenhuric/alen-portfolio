@@ -203,7 +203,7 @@ const Header = ({
           className="
             flex 
             fixed z-10 right-5 top-1 
-            px-4 py-2.5 
+            px-4 xs:px-1 py-2.5 
             bg-gray-200
             rounded-md 
             items-center 

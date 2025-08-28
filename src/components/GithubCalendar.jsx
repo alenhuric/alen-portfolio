@@ -6,22 +6,26 @@ function GithubCalendar() {
   const [calendarProps, setCalendarProps] = useState({
     blockSize: 12,
     blockMargin: 6,
+    fontSize: 14,
   });
 
   useEffect(() => {
     function handleResize() {
-      if (window.innerWidth < 640) {
+      if (window.innerWidth < 470) {
+        // xsmall screens
+        setCalendarProps({ blockSize: 5, blockMargin: 2, fontSize: 10 });
+      } else if (window.innerWidth < 640) {
         // small screens
-        setCalendarProps({ blockSize: 6, blockMargin: 2 });
+        setCalendarProps({ blockSize: 6, blockMargin: 2, fontSize: 12 });
       } else if (window.innerWidth < 920) {
         // medium screens
-        setCalendarProps({ blockSize: 9, blockMargin: 2 });
+        setCalendarProps({ blockSize: 9, blockMargin: 2, fontSize: 15 });
       } else if (window.innerWidth < 1024) {
         // large screens
-        setCalendarProps({ blockSize: 11, blockMargin: 3 });
+        setCalendarProps({ blockSize: 11, blockMargin: 3, fontSize: 16 });
       } else {
         // x-large screens
-        setCalendarProps({ blockSize: 11, blockMargin: 6 });
+        setCalendarProps({ blockSize: 11, blockMargin: 6, fontSize: 17 });
       }
     }
 
@@ -40,7 +44,7 @@ function GithubCalendar() {
           blockSize={calendarProps.blockSize}
           blockMargin={calendarProps.blockMargin}
           blockRadius={5}
-          fontSize={14}
+          fontSize={calendarProps.fontSize}
         />
       </div>
     </section>
