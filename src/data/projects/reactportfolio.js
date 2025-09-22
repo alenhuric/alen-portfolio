@@ -1,6 +1,6 @@
 export default [
   {
-    title: "This Site",
+    title: "Portfolio Site",
     imgUrl: "/assets/react.png",
     stack: ["React", "Tailwind CSS"],
     link: "https://github.com/alenhuric/alen-portfolio",
