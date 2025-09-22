@@ -118,7 +118,7 @@ function App() {
             path="/Projects"
             element={
               <div className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
-                <div className="max-w-5xl w-11/12 mx-auto">
+                <div className="max-w-5xl w-11/12 mx-auto pt-2">
                   <Portfolio />
                   <GithubCalendar />
                   <Footer />
@@ -132,6 +132,9 @@ function App() {
               <div className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
                 <div className="max-w-5xl w-11/12 mx-auto">
                   {/* <Intro theme={theme} /> */}
+                  <h1 className="text-4xl md:text-5xl font-bold pt-28 text-center">
+                    React Projects
+                  </h1>
                   <ProjectsPortfolio data={reactportfolio} />
                   <Footer />
                 </div>
@@ -144,6 +147,9 @@ function App() {
               <div className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
                 <div className="max-w-5xl w-11/12 mx-auto">
                   {/* <Intro theme={theme} /> */}
+                  <h1 className="text-4xl md:text-5xl font-bold pt-28 text-center">
+                    Vue Projects
+                  </h1>
                   <ProjectsPortfolio data={vueportfolio} />
                   <Footer />
                 </div>
@@ -167,6 +173,9 @@ function App() {
             element={
               <div className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
                 <div className="max-w-5xl w-11/12 mx-auto">
+                  <h1 className="text-4xl md:text-5xl font-bold pt-28 text-center">
+                    Laravel Projects
+                  </h1>
                   {/* <Intro theme={theme} /> */}
                   <ProjectsPortfolio data={laravelportfolio} />
                   <Footer />
