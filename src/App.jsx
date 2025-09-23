@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/Header";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -77,6 +78,7 @@ function App() {
 
   return (
     <Router basename="/">
+      <ScrollToTop />
       <div className="relative">
         <Header
           theme={theme}
@@ -162,6 +164,9 @@ function App() {
               <div className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
                 <div className="max-w-5xl w-11/12 mx-auto">
                   {/* <Intro theme={theme} /> */}
+                  <h1 className="text-4xl md:text-5xl font-bold pt-28 text-center">
+                    Symfony Projects
+                  </h1>
                   <ProjectsPortfolio data={symfonyportfolio} />
                   <Footer />
                 </div>
