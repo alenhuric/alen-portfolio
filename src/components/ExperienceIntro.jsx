@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const ExperienceIntro = ({ theme }) => {
   return (
     <section className="flex flex-col md:flex-row items-center justify-center min-h-screen py-10 px-6 md:px-20">
-      <div className="md:w-4/5 text-center md:text-left mt-5 mb-10 md:mb-0">
+      <div className="md:w-4/5 text-center md:text-left">
         <h2 className="text-4xl md:text-2xl font-bold mb-4">
           About Me{" "}
           <span
