@@ -14,6 +14,9 @@ import reactportfolio from "./data/projects/reactportfolio";
 import laravelportfolio from "./data/projects/laravelportfolio";
 import vueportfolio from "./data/projects/vueportfolio";
 import GithubCalendar from "./components/GithubCalendar";
+import Skills from "./components/Skills";
+import { SiLaravel, SiSymfony } from "react-icons/si";
+import { FaReact, FaVuejs } from "react-icons/fa";
 
 function App() {
   const [theme, setTheme] = useState(null);
@@ -110,6 +113,7 @@ function App() {
               <div className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
                 <div className="max-w-5xl w-11/12 mx-auto">
                   <ExperienceIntro theme={theme} />
+                  <Skills />
                   <Timeline />
                   <Footer />
                 </div>
@@ -134,7 +138,11 @@ function App() {
               <div className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
                 <div className="max-w-5xl w-11/12 mx-auto">
                   {/* <Intro theme={theme} /> */}
-                  <h1 className="text-4xl md:text-5xl font-bold pt-28 text-center">
+                  {/* <h1 className="text-4xl md:text-5xl font-bold pt-28 text-center">
+                    React Projects
+                  </h1> */}
+                  <h1 className="flex items-center justify-center gap-3 text-4xl md:text-5xl font-bold pt-28 text-center">
+                    <FaReact className="text-sky-400 text-5xl md:text-6xl" />
                     React Projects
                   </h1>
                   <ProjectsPortfolio data={reactportfolio} />
@@ -149,7 +157,11 @@ function App() {
               <div className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
                 <div className="max-w-5xl w-11/12 mx-auto">
                   {/* <Intro theme={theme} /> */}
-                  <h1 className="text-4xl md:text-5xl font-bold pt-28 text-center">
+                  {/* <h1 className="text-4xl md:text-5xl font-bold pt-28 text-center">
+                    Vue Projects
+                  </h1> */}
+                  <h1 className="flex items-center justify-center gap-3 text-4xl md:text-5xl font-bold pt-28 text-center">
+                    <FaVuejs className="text-green-500 text-5xl md:text-6xl" />
                     Vue Projects
                   </h1>
                   <ProjectsPortfolio data={vueportfolio} />
@@ -164,7 +176,11 @@ function App() {
               <div className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
                 <div className="max-w-5xl w-11/12 mx-auto">
                   {/* <Intro theme={theme} /> */}
-                  <h1 className="text-4xl md:text-5xl font-bold pt-28 text-center">
+                  {/* <h1 className="text-4xl md:text-5xl font-bold pt-28 text-center">
+                    Symfony Projects
+                  </h1> */}
+                  <h1 className="flex items-center justify-center gap-3 text-4xl md:text-5xl font-bold pt-28 text-center">
+                    <SiSymfony className="text-gray-500 text-5xl md:text-6xl" />
                     Symfony Projects
                   </h1>
                   <ProjectsPortfolio data={symfonyportfolio} />
@@ -178,7 +194,8 @@ function App() {
             element={
               <div className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
                 <div className="max-w-5xl w-11/12 mx-auto">
-                  <h1 className="text-4xl md:text-5xl font-bold pt-28 text-center">
+                  <h1 className="flex items-center justify-center gap-3 text-4xl md:text-5xl font-bold pt-28 text-center">
+                    <SiLaravel className="text-red-500 text-5xl md:text-6xl" />
                     Laravel Projects
                   </h1>
                   {/* <Intro theme={theme} /> */}

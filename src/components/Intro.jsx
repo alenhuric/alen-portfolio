@@ -75,10 +75,10 @@ const Intro = ({ theme }) => {
           <Typewriter
             options={{
               strings: [
+                "Computer Science Student",
+                "PHP & LAMP Stack Enthusiast",
                 "Full Stack Developer",
-                "PHP & LAMP Stack Specialist",
-                "Open Source Contributor",
-                "Freelancer",
+                "Always Building Something New",
               ],
               autoStart: true,
               loop: true,
