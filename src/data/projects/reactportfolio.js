@@ -6,6 +6,12 @@ export default [
     link: "https://github.com/alenhuric/alen-portfolio",
   },
   {
+    title: "Weather Dashboard",
+    imgUrl: "/assets/weather-app.png",
+    stack: ["React", "Python"],
+    link: "https://weather.alenhuric.com",
+  },
+  {
     title: "Rock Paper Scissors",
     imgUrl: "/assets/rps.png",
     stack: ["React Native", "Expo"],
